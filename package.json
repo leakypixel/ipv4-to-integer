@@ -1,0 +1,20 @@
+{
+  "name": "ipv4-to-integer",
+  "version": "0.0.1",
+  "description": "Module to convert IPv4 addresses to integers.",
+  "main": "convert.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http//replace.me"
+  },
+  "keywords": [
+    "ipv4",
+    "convert",
+    "integer"
+  ],
+  "author": "Craig Fletcher (hi@leakypixel.net)",
+  "license": "ISC"
+}

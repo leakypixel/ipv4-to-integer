@@ -1,0 +1,8 @@
+'use strict';
+
+function ipv4ToDecimal(ip) {
+  var octets = ip.split(".");
+  return (octets[0] * 16777216) + (octets[1] * 65536) + (octets[2] * 256) + Number(octets[3]);
+};
+
+module.exports = ipv4ToDecimal; 
