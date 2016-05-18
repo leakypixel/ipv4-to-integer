@@ -15,42 +15,23 @@ var KNOWN_IP_VALUES = [
   {'ip':'210.176.33.0','value':3534758144},
   {'ip':'157.191.255.255','value':2646605823},
   {'ip':'77.237.223.255','value':1307435007},
-  {'ip':'193.134.161.255','value':3246825983},
-  {'ip':'179.0.69.255','value':3003139583},
-  {'ip':'185.76.203.255','value':3108817919},
-  {'ip':'27.106.215.255','value':459986943},
-  {'ip':'93.95.40.0','value':1566517248},
-  {'ip':'176.31.69.183','value':2954839479},
-  {'ip':'195.130.211.0','value':3280130816},
-  {'ip':'168.227.131.255','value':2833482751},
-  {'ip':'206.235.85.0','value':3471529216},
-  {'ip':'92.63.15.255','value':1547636735},
-  {'ip':'103.246.235.255','value':1744235519},
-  {'ip':'208.89.200.0','value':3495544832},
-  {'ip':'89.149.175.0','value':1502981888},
-  {'ip':'122.207.255.255','value':2060451839},
-  {'ip':'191.237.239.255','value':3220041727},
-  {'ip':'200.113.213.255','value':3362903551},
-  {'ip':'37.59.227.95','value':624681823},
-  {'ip':'89.35.83.255','value':1495487487},
-  {'ip':'89.45.79.255','value':1496141823},
-  {'ip':'46.20.192.0','value':773111808},
-  {'ip':'185.59.4.0','value':3107652608},
-  {'ip':'90.36.136.255','value':1512343807},
-  {'ip':'141.253.0.0','value':2382168064},
-  {'ip':'192.84.211.255','value':3226784767},
-  {'ip':'77.244.176.0','value':1307881472},
-  {'ip':'194.236.0.0','value':3270246400},
-  {'ip':'91.142.0.0','value':1536032768},
-  {'ip':'85.131.127.255','value':1434681343},
-  {'ip':'194.0.140.255','value':3254815999},
-  {'ip':'188.92.7.255','value':3160147967},
-  {'ip':'160.85.255.255','value':2689990655},
-  {'ip':'23.67.72.0','value':390285312},
-  {'ip':'192.100.3.0','value':3227779840},
-  {'ip':'185.105.156.0','value':3110706176},
-  {'ip':'82.144.128.0','value':1385201664},
-  {'ip':'91.210.47.255','value':1540501503}
+  {'ip':'193.134.161.255','value':3246825983}
+];
+
+var BAD_VALUES = [
+  'drxfctgvhbjn',
+  'y7r4thgv5n74t n80vm',
+  '26735.863..3765.9',
+  345678,
+  '1.1.1',
+  3333,
+  ''
+];
+
+var BAD_IPS = [
+  '333.333.333.333',
+  '-13.-12.-11.-2',
+  '1111.1111.2222.5555'
 ];
 
 describe("IPv4 conversion algorithm", function() {
@@ -62,6 +43,28 @@ describe("IPv4 conversion algorithm", function() {
     for (; index < length; index++) {
       var knownIP = KNOWN_IP_VALUES[index];
       expect(convert(knownIP.ip)).toEqual(knownIP.value);
+    }
+  });
+
+  it("Should return NaN if the value passed is not in the correct format", function() {
+    var index = 0, 
+      length = BAD_VALUES.length;
+    
+    for (; index < length; index++) {
+      expect(convert(BAD_VALUES[index])).toBeNaN();
+    }
+  });
+
+  it("Should return an integer, even if the value passed is not a valid IP", function() {
+    var index = 0, 
+      length = BAD_IPS.length;
+    
+    for (; index < length; index++) {
+      var returnValue = convert(BAD_IPS[index]);
+      expect(returnValue).not.toBeNull();
+      expect(returnValue).not.toBeNaN();
+      expect(returnValue).toBeDefined();
+
     }
   });
 });
