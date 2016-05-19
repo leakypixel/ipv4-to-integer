@@ -4,7 +4,7 @@
   "description": "Module to convert IPv4 addresses to integers.",
   "main": "convert.js",
   "scripts": {
-    "test": "istanbul cover jasmine-node spec/"
+    "test": "istanbul cover -x **/spec/** jasmine-node spec/"
   },
   "repository": {
     "type": "git",
