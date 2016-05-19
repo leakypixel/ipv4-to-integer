@@ -1,5 +1,6 @@
 [![Build Status](https://api.travis-ci.org/leakypixel/ipv4-to-integer.svg)](https://travis-ci.org/leakypixel/ipv4-to-integer)
 [![Code Climate](https://codeclimate.com/github/leakypixel/ipv4-to-integer/badges/gpa.svg)](https://codeclimate.com/github/leakypixel/ipv4-to-integer)
+[![Test Coverage](https://codeclimate.com/github/leakypixel/ipv4-to-integer/badges/coverage.svg)](https://codeclimate.com/github/leakypixel/ipv4-to-integer/coverage)
 # ipv4-to-integer
 NPM module to convert IPv4 addresses to integers.
 

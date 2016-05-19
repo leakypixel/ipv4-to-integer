@@ -18,6 +18,7 @@
   "author": "Craig Fletcher (hi@leakypixel.net)",
   "license": "ISC",
   "devDependencies": {
+    "codeclimate-test-reporter": "^0.3.1",
     "istanbul": "^0.4.3",
     "jasmine-node": "^1.14.5"
   }
