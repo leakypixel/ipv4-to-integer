@@ -1,3 +1,4 @@
+[![Build Status](https://api.travis-ci.org/leakypixel/ipv4-to-integer.svg)](https://travis-ci.org/leakypixel/ipv4-to-integer)
 # ipv4-to-integer
 NPM module to convert IPv4 addresses to integers.
 
