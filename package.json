@@ -1,6 +1,6 @@
 {
   "name": "ipv4-to-integer",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Module to convert IPv4 addresses to integers.",
   "main": "convert.js",
   "scripts": {
@@ -16,9 +16,8 @@
     "integer"
   ],
   "author": "Craig Fletcher (hi@leakypixel.net)",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
-    "codeclimate-test-reporter": "^0.3.1",
     "istanbul": "^0.4.3",
     "jasmine-node": "^1.14.5"
   }
