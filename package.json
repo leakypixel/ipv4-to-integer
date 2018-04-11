@@ -1,6 +1,6 @@
 {
   "name": "ipv4-to-integer",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Module to convert IPv4 addresses to integers.",
   "main": "convert.js",
   "scripts": {
