@@ -18,7 +18,7 @@
   "author": "Craig Fletcher (hi@leakypixel.net)",
   "license": "MIT",
   "devDependencies": {
-    "istanbul": "^0.4.3",
-    "jasmine-node": "^1.14.5"
+    "istanbul": "0.4.x",
+    "jasmine-node": "1.x"
   }
 }
