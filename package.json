@@ -4,7 +4,7 @@
   "description": "Module to convert IPv4 addresses to integers.",
   "main": "convert.js",
   "scripts": {
-    "test": "istanbul cover -x **/spec/** jasmine-node spec/"
+    "test": "nyc --reporter=lcov --reporter=text-summary jasmine"
   },
   "repository": {
     "type": "git",
@@ -18,7 +18,7 @@
   "author": "Craig Fletcher (hi@leakypixel.net)",
   "license": "MIT",
   "devDependencies": {
-    "istanbul": "0.4.x",
-    "jasmine-node": "1.x"
+    "jasmine": "^3.5.0",
+    "nyc": "^14.1.1"
   }
 }
